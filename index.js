@@ -51,7 +51,7 @@ app.get('/api/tags/:gameId', (req, res) => {
 
 
 app.get('/api/dlc/:gameId', (req, res) => {
-  Axios.get('http://localhost:3003/api/dlc/' + req.params.gameId)
+  Axios.get('http://ec2-54-193-86-65.us-west-1.compute.amazonaws.com:3003/main.js' + req.params.gameId)
     .then(({ data }) => {
       res.status(200).send(data);
     })
