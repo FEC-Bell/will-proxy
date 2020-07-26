@@ -24,11 +24,19 @@ app.get('/api/gamereviews/:gameId', (req, res) => {
     });
 });
 
-
+app.get('/api/description/:gameId', (req, res) => {
+  Axios.get('http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/api/description/' + req.params.gameId)
+    .then(({ data }) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
 
 app.get('/api/reviewcount/:gameId', (req, res) => {
 
-  Axios.get('http://localhost:3002/api/reviewcount/' + req.params.gameId)
+  Axios.get('http://ec2-34-211-181-237.us-west-2.compute.amazonaws.com:3002/api/reviewcount/' + req.params.gameId)
     .then(({ data }) => {
       res.status(200).send(data);
     })
@@ -39,7 +47,7 @@ app.get('/api/reviewcount/:gameId', (req, res) => {
 
 
 app.get('/api/tags/:gameId', (req, res) => {
-  Axios.get('http://localhost:3006/api/tags/' + req.params.gameId)
+  Axios.get('http://ec2-34-211-181-237.us-west-2.compute.amazonaws.com:3006/api/tags/' + req.params.gameId)
     .then(({ data }) => {
       res.status(200).send(data);
     })
@@ -51,7 +59,7 @@ app.get('/api/tags/:gameId', (req, res) => {
 
 
 app.get('/api/dlc/:gameId', (req, res) => {
-  Axios.get('http://ec2-54-193-86-65.us-west-1.compute.amazonaws.com:3003/main.js' + req.params.gameId)
+  Axios.get('http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/dlc/' + req.params.gameId)
     .then(({ data }) => {
       res.status(200).send(data);
     })

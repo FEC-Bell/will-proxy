@@ -23,16 +23,15 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <GlobalStyle>
+        <GlobalStyle />
           <div>
-            <div id='reviews-graph'></div>
-            <div id='description-placeholder'></div>
             <div id="photo-carousel"></div>
+            <div id='game-description'></div>
             <div id='dlc'></div>
-            <div id='tags'></div>
             <div id='reviews'></div>
+            <div id='reviews-graph'></div>
+            <div id='tags'></div>
           </div>
-        </GlobalStyle>
       </React.Fragment>
     );
   }
