@@ -5,6 +5,10 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 html {
   background: #1b2838;
+  max-width: 940px;
+  width: auto;
+  margin: 10%;
+  margin-top: 0;
 }
 
 body {
@@ -25,8 +29,10 @@ class App extends React.Component {
       <React.Fragment>
         <GlobalStyle />
           <div>
-            <div id="photo-carousel"></div>
-            <div id='game-description'></div>
+            <div style={{'display': 'flex', flexDirection:'row'}}>
+              <div id="photo-carousel" style={{paddingRight: '18px'}}></div>
+              <div id='game-description'></div>
+            </div>
             <div id='dlc'></div>
             <div id='reviews'></div>
             <div id='reviews-graph'></div>
