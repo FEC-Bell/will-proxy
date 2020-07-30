@@ -78,7 +78,6 @@ app.get('/api/name/:gameId', (req, res) => {
 
 app.get('/api/media/:gameId', (req, res) => {
 
-  // This gets the same photos when I run on local host. Need to confirm when deployed
   Axios.get('http://ec2-18-188-192-44.us-east-2.compute.amazonaws.com:3004/api/media/' + req.params.gameId)
     .then(({ data }) => {
       res.status(200).send(data);

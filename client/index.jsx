@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, styled } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -16,6 +16,7 @@ body {
 }
 `;
 
+
 class App extends React.Component {
 
   constructor(props) {
@@ -28,16 +29,16 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <GlobalStyle />
-          <div>
-            <div style={{'display': 'flex', flexDirection:'row'}}>
-              <div id="photo-carousel" style={{paddingRight: '18px'}}></div>
-              <div id='game-description'></div>
-            </div>
-            <div id='dlc'></div>
-            <div id='reviews'></div>
-            <div id='reviews-graph'></div>
-            <div id='tags'></div>
+        <div style={{ marginBottom: '-50px'}}>
+          <div style={{ 'display': 'flex', flexDirection: 'row'}}>
+            <div id="photo-carousel" style={{ paddingRight: '18px' }}></div>
+            <div id='game-description'></div>
           </div>
+          <div id="dlc"></div>
+          <div id='reviews'></div>
+          <div id='reviews-graph'></div>
+          <div id='tags'></div>
+        </div>
       </React.Fragment>
     );
   }
