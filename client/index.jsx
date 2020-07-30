@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import { createGlobalStyle, styled } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-html {
-  background: #1b2838;
-  max-width: 940px;
-  width: auto;
-  margin: 10%;
-  margin-top: 0;
-}
+  html {
+    background: #1b2838;
+    max-width: 940px;
+    width: auto;
+    margin: 10%;
+    margin-top: 0;
+  }
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
 `;
 
 
@@ -29,9 +29,9 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <GlobalStyle />
-        <div style={{ marginBottom: '-50px'}}>
+        <div>
           <div style={{ 'display': 'flex', flexDirection: 'row'}}>
-            <div id="photo-carousel" style={{ paddingRight: '18px' }}></div>
+            <div id="photo-carousel" style={{ paddingRight: '18px', marginTop: 0 }}></div>
             <div id='game-description'></div>
           </div>
           <div id="dlc"></div>
